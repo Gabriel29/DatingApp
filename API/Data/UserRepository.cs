@@ -32,7 +32,8 @@ namespace API.Data
         {
             return await _context.Users
                 .ProjectTo<MemberDto>(_mapper.ConfigurationProvider)
-                .ToListAsync();        }
+                .ToListAsync();        
+        }
 
         public async Task<AppUser> GetUserByIdAsync(int id)
         {
