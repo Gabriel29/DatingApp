@@ -13,11 +13,6 @@ namespace API.Extensions
             IConfiguration config)
         {
             // Add services to the container.
-            services.AddDbContext<DataContext>(opt => 
-            {
-                opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
-            });
-
             services.AddCors();
             services.AddScoped<ITokenService, TokenService>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
